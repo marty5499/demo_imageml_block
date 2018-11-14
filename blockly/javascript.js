@@ -1,7 +1,8 @@
 Blockly.JavaScript['imageml_classifier'] = function (block) {
   var text_cameraurl = block.getFieldValue('cameraURL');
+  var text_camSource = block.getFieldValue('camSource');
   var text_modelname = block.getFieldValue('modelName');
-  var code = 'getVideoClassifier("' + text_modelname + '")';
+  var code = 'getVideoClassifier("' + text_modelname + '","' + text_camSource + '")';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 

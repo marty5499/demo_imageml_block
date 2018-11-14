@@ -2,7 +2,9 @@
 Blockly.Blocks['imageml_classifier'] = {
   init: function () {
     this.appendDummyInput()
-      .appendField("模型名稱：")
+      .appendField("相機位置：")
+      .appendField(new Blockly.FieldTextInput("本機"), "camSource")
+      .appendField(" ，模型名稱：")
       .appendField(new Blockly.FieldTextInput(""), "modelName");
     this.setOutput(true, null);
     this.setColour(230);

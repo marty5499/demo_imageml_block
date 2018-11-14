@@ -12,6 +12,7 @@
     <field name="VAR">imageClassifier</field>
     <value name="VALUE">
       <block type="imageml_classifier">
+        <field name="camSource">本機</field>
         <field name="modelName">猜拳</field>
       </block>
     </value>
