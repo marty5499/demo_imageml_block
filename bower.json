@@ -1,0 +1,19 @@
+{
+  "name": "webduino-module-deeplearn",
+  "description": "Deeplearn Module for Webduino",
+  "main": "deeplearn.js",
+  "authors": "",
+  "license": "MIT",
+  "keywords": [
+    "arduino",
+    "webduino",
+    "deeplearn"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

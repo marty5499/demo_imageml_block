@@ -1,0 +1,1 @@
+MSG.catDeeplearn = "影像辨識";

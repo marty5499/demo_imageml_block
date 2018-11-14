@@ -1,0 +1,30 @@
+<category id="catDeeplearn">
+  <!--
+  <block type="variables_set">
+    <field name="VAR">camera</field>
+    <value name="VALUE">
+      <block type="deeplearn_camera">
+      </block>
+    </value>
+  </block>
+  -->
+  <block type="variables_set">
+    <field name="VAR">imageClassifier</field>
+    <value name="VALUE">
+      <block type="imageml_classifier">
+        <field name="modelName">猜拳</field>
+      </block>
+    </value>
+  </block>
+  <block type="imageml_label">
+    <value name="name">
+      <block type="demo_show_text">
+        <value name="show_">
+          <block type="text">
+            <field name="TEXT">0</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+</category>
