@@ -100,6 +100,16 @@ class Camera {
     }
   }
 
+  drawRotated(canvas, image, degrees) {
+    var context = canvas.getContext('2d');
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.save();
+    context.translate(canvas.width / 2, canvas.height / 2);
+    context.rotate(degrees * Math.PI / 180);
+    context.drawImage(image, -image.width / 2, -image.width / 2);
+    context.restore();
+  }
+
   onCanvas(canvasId, callback) {
     this.start();
     var canvas = typeof canvasId === 'object' ?
@@ -137,7 +147,7 @@ class Camera {
       espCamImg.src = this.url;
       var ctx = canvas.getContext('2d');
       espCamImg.onload = function () {
-        ctx.drawImage(espCamImg, 0, 0);
+        self.drawRotated(canvas, espCamImg, 90);
         if (typeof callback == 'function') {
           callback(canvas);
         }
