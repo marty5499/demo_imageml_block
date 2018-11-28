@@ -104,7 +104,6 @@ let Camera = (function () {
       }
       image.src = this.URL;
       image.onload = function () {
-        self.drawRotated(canvas, image, 90);
         setTimeout(function () {
           if (typeof callback == 'function') {
             callback(image);
@@ -139,6 +138,7 @@ let Camera = (function () {
             break;
           case jpgCam:
             self.onImage(document.createElement('img'), function (img) {
+              self.drawRotated(canvas, img, 90);
               var ctx = canvas.getContext('2d');
               ctx.drawImage(img, 0, 0, img.width, img.height, 0, 0, canvas.width, canvas.height);
               if (typeof callback == 'function') {
