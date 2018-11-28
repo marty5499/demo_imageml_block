@@ -104,7 +104,7 @@ let Camera = (function () {
       }
       image.src = this.URL;
       image.onload = function () {
-        //self.drawRotated(canvas, image, 90);
+        self.drawRotated(canvas, image, 90);
         setTimeout(function () {
           if (typeof callback == 'function') {
             callback(image);
